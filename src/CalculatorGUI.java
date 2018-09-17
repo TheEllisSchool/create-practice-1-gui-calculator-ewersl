@@ -89,7 +89,7 @@ public class CalculatorGUI extends JFrame {
         factorialBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                  calcFactorial();
+                   calcFactorial ();
             }
         });
         buttonPanel.add(factorialBtn);
@@ -129,7 +129,24 @@ public class CalculatorGUI extends JFrame {
 	}
 
 	private void calcHigher() {
-		// TODO Auto-generated method stub
+		double x = Double.parseDouble(in1.getText());
+		double y = Double.parseDouble(in2.getText());
+		double higherNum = 0;
+		
+		if (x<y); {
+			higherNum  = y;
+			answer.setText ("The higher number is: " + higherNum);
+		}
+		
+		if (y<x); {
+			higherNum  = x;
+			answer.setText ("The higher number is: " + higherNum);
+		}
+		
+		if (x == y); {
+			higherNum  = y;
+			answer.setText ("The numbers are equal");
+		}
 		
 	}
 
@@ -138,8 +155,14 @@ public class CalculatorGUI extends JFrame {
 		
 	}
 
-	private void calcFactorial() {
-		// TODO Auto-generated method stub
+	private void  calcFactorial () {
+		double x = Double.parseDouble (in1.getText()); 
+		for (x = 0; x > 0 ; x++) {
+			x = (x-1)* 1 ; }  
+		
+		
+		answer.setText ("The factorial is:" x);
+		
 		
 	}
 
@@ -154,6 +177,8 @@ public class CalculatorGUI extends JFrame {
 		
 		
 	}
+	
+	
 
 	public static void main(String[] args) {
 		try {
