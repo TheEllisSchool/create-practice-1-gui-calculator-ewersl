@@ -167,9 +167,10 @@ public class CalculatorGUI extends JFrame {
 		double number = Double.parseDouble (in1.getText()); 
 		long factorial = 1; 
 		for (int i = 1; i<= number; ++i);
+			long i = 0;
 			factorial *= i;
 	
-		answer.setText ("The factorial is:" factorial);
+		answer.setText ("The factorial is:" + factorial);
 		
 		
 	}
