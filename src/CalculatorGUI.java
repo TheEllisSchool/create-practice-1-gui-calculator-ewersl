@@ -151,17 +151,25 @@ public class CalculatorGUI extends JFrame {
 	}
 
 	private void calcPerChange() {
-		// TODO Auto-generated method stub
+		double x = Double.parseDouble(in1.getText());
+		double y = Double.parseDouble(in2.getText());
+		
+		double percentInc = ((y-x) /x) * 200;
+		
+		if (percentInc > 0)
+			answer.setText ("Percentage is Increased by" + percentInc + "%");
+		else
+			answer.setText ("Percentage is Decreased by" + percentInc + "%");
 		
 	}
 
 	private void  calcFactorial () {
-		double x = Double.parseDouble (in1.getText()); 
-		for (x = 0; x > 0 ; x++) {
-			x = (x-1)* 1 ; }  
-		
-		
-		answer.setText ("The factorial is:" x);
+		double number = Double.parseDouble (in1.getText()); 
+		long factorial = 1; 
+		for (int i = 1; i<= number; ++i);
+			factorial *= i;
+	
+		answer.setText ("The factorial is:" factorial);
 		
 		
 	}
